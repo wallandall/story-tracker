@@ -4,13 +4,14 @@ This application allows users to create and share stories.
 
 # Demo
 
-Here is a working live demo:
+Here is a working live demo: https://webe-story-tracker.herokuapp.com/ 
 
 
 # Installing
 ## Dependencies
 ```
   express
+  mongoose
 
 
 ```
