@@ -1,0 +1,11 @@
+{
+  "name": "story-tracker",
+  "version": "1.0.0",
+  "description": "An app to write stories which can be private or shared",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
