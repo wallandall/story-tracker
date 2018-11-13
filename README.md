@@ -1,6 +1,6 @@
 # Story-Tracker
 
-This application allows users to create and share stories.
+This application allows users to create and share stories as well as authenticate using Passport and Google OAuth Strategy.
 
 # Demo
 
@@ -12,6 +12,9 @@ Here is a working live demo: https://webe-story-tracker.herokuapp.com/
 ```
   express
   mongoose
+  passport
+  passport-google-oauth20
+
 
 
 ```
