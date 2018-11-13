@@ -4,7 +4,7 @@ This application allows users to create and share stories.
 
 # Demo
 
-Here is a working live demo: https://webe-story-tracker.herokuapp.com/ 
+Here is a working live demo: https://webe-story-tracker.herokuapp.com/
 
 
 # Installing
@@ -27,12 +27,20 @@ npm install
 ## Environment Variables
 - PORT
   - Defines the Port the application runs on
-- MONGODB_URI
-  - Defines the URL for MongoDB
+- MLAB_USER
+  - MLAB database user
+- MLAB_PASSWORD
+  - MLAB database MLAB_PASSWORD
+- STORY_TRACKER_DB
+  - The name of the database
+- STORY_TRACKER_googleClientID
+  - Google OAuth Client ID
+- STORY_TRACKER_googleClientSecret
+  - Google OAuth Client Secret Key
 - NODE_ENV
   - The Node Environment eg: production, test or development
-- SECRET
-  - Secret used to generate sessions
+
+
 
 ## To to run the program type the below command from the application directory
 
