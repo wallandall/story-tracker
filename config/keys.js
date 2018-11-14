@@ -1,6 +1,6 @@
 
-const MLAB_USER = process.env.MLAB_USER;
-const MLAB_PASSWORD = process.env.MLAB_PASSWORD;
+const MLAB_USER = encodeURIComponent(process.env.MLAB_USER);
+const MLAB_PASSWORD = encodeURIComponent(process.env.MLAB_PASSWORD);
 const STORY_TRACKER_googleClientID = process.env.STORY_TRACKER_googleClientID;
 const STORY_TRACKER_googleClientSecret = process.env.STORY_TRACKER_googleClientSecret;
 const STORY_TRACKER_DB = process.env.STORY_TRACKER_DB;
