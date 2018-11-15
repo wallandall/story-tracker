@@ -1,41 +1,65 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 const passport = require('passport');
 
-//Passport Config
+// Load User Model
+require('./models/User');
+
+// Passport Config
 require('./config/passport')(passport);
 
-//Load Routes
+// Load Routes
 const auth = require('./routes/auth');
 
-//Load keys
+// Load Keys
 const keys = require('./config/keys');
-
-
-//console.log(keys.mongoURI);
-
 
 // Map global promises
 mongoose.Promise = global.Promise;
-
 // Mongoose Connect
 mongoose.connect(keys.mongoURI, {
-   useNewUrlParser: true,
- })
+  useNewUrlParser: true
+})
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
 
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Test');
+  res.send('It Works!');
 });
 
-//Use routes
+app.use(cookieParser());
+app.use(session({
+  secret: 'secre3t',
+  resave: false,
+  saveUninitialized: false
+}));
+
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Set global Variables
+app.use((req, res, next) => {
+  res.locals.user = req.user || null;
+  next();
+});
+
+// Set global vars
+app.use((req, res, next) => {
+  res.locals.user = req.user || null;
+  next();
+});
+
+// Use Routes
 app.use('/auth', auth);
+
 
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  console.log(`Server started on ${port}`);
+  console.log(`Server started on port ${port}`)
 });

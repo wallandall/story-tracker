@@ -14,8 +14,8 @@ Here is a working live demo: https://webe-story-tracker.herokuapp.com/
   mongoose
   passport
   passport-google-oauth20
-
-
+  express-session
+  cookie-parser
 
 ```
 
