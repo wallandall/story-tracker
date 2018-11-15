@@ -16,6 +16,7 @@ Here is a working live demo: https://webe-story-tracker.herokuapp.com/
   passport-google-oauth20
   express-session
   cookie-parser
+  express-handlebars
 
 ```
 
