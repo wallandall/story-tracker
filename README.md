@@ -17,6 +17,7 @@ Here is a working live demo: https://webe-story-tracker.herokuapp.com/
   express-session
   cookie-parser
   express-handlebars
+  body-parser
 
 ```
 
