@@ -19,6 +19,7 @@ Here is a working live demo: https://webe-story-tracker.herokuapp.com/
   express-handlebars
   body-parser
   moment
+  method-override
 
 ```
 
