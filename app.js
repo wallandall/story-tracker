@@ -28,7 +28,8 @@ const {
   truncate,
   stripTags,
   formatDate,
-  select
+  select,
+  editIcon
 } = require('./helpers/hbs');
 
 // Map global promises
@@ -55,7 +56,8 @@ mongoose.connect(keys.mongoURI, {
       truncate: truncate,
       stripTags: stripTags,
       formatDate:formatDate,
-      select:select
+      select:select,
+      editIcon: editIcon
     },
     defaultLayout:'main'
   }));
